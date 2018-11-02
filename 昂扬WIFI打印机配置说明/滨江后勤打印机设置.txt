@@ -1,0 +1,19 @@
+wifi名称：TP-LINK_YFB
+wifi密码：87778932
+
+
+打印机的打印网址
+http://www.aykj0577.com/wp-content/uploads/2015/01/2015010802.pdf
+
+服务器IP
+121.43.235.40
+端口:
+6105(新款打印机专用，同时兼容老版本的)
+
+打印机测试绑定的地址：
+http://121.43.235.40/Login.aspx
+登录名: superman
+登录密码: superusername8899
+
+昂扬电子科技-技术联系人QQ:
+1958721646

@@ -1,0 +1,24 @@
+vi /etc/my.cnf    #编辑文件，找到[mysqld]，在下面添加一行skip-grant-tables
+[mysqld]
+skip-grant-tables
+:wq!  #保存退出
+service mysqld restart  #重启MySQL服务
+
+2、进入MySQL控制台
+mysql -uroot -p   #直接按回车，这时不需要输入root密码
+
+3、修改root密码
+update mysql.user set password=password('123456') where User="root" and Host="localhost";
+flush privileges;  #刷新系统授权表
+grant all on *.* to 'root'@'localhost' identified by '123456' with grant option;
+
+4、取消/etc/my.cnf中的skip-grant-tables
+vi /etc/my.cnf   编辑文件，找到[mysqld]，删除skip-grant-tables这一行
+:wq!  #保存退出
+
+5、重启mysql
+service mysqld restart    #重启mysql，这个时候mysql的root密码已经修改为123456
+
+6、进入mysql控制台
+mysql -uroot -p  #进入mysql控制台
+123456 #输入密码
