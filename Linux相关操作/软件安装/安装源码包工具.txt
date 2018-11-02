@@ -1,0 +1,11 @@
+安装源码包工具：
+
+1. 解压：tar -zxvf xxx.tar.gz
+
+2. 进入目录：cd xxx
+
+3. 编译
+./configure --prefix=/usr/local/xxx
+
+4. 安装
+make && make install

@@ -1,0 +1,8 @@
+tar打包排除部分目录:
+tar -zcvf test.tar.gz --exclude=test/logs --exclude=test/db.php test
+
+#压缩文件，目录并且排除掉.svn，logs，uploads目录
+tar -zcvf wap.xiaotui.so.tar.gz wap.xiaotui.so --exclude=uploads --exclude=*.svn --exclude=*logs
+
+zip打包排除部分目录:
+zip -r test.zip test -x /test/logs/* -x /test/db.php

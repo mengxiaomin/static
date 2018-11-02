@@ -1,0 +1,14 @@
+1.grep "被查找的字符串" 文件名
+例子1：
+grep -i "www.souhuol.com" /home/wwwroot/*.log	#加了i表示不区分大小写
+例子2:
+grep -v "被查找的字符串" /home/wwwroot/*.log	#加了v表示不匹配
+
+
+2.使用find
+例子1：
+#从/home/wwwroot找所有扩展为.log的文件，并找出包含"ERROR"的行, xargs是表示输出的意思
+find /home/wwwroot -type f -name "*.log" | xargs grep "ERROR"
+例子2：
+#从当前目录下找出所有扩展为.ini文件，并找出包含"nginx"的行
+find . -type f -name "*.ini" | xargs grep "nginx"

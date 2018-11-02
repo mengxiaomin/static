@@ -1,0 +1,13 @@
+Linux下为普通账号加sudo权限
+
+1. 错误提示：
+当我们使用sudo命令切换用户的时候可能会遇到提示以下错误：
+xxx is not in the sudoers file. This incident will be reported，
+xxx是你当前的用户名，
+究其原因是用户没有加入到sudo的配置文件里
+
+2. 解决方法：
+切换到root用户，运行visudo命令，打开配置文件，
+找到"root	ALL=(ALL)	ALL"在下面添加一行
+xxx ALL=(ALL)	ALL
+并保存

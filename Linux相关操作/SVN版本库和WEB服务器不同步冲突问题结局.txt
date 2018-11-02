@@ -1,0 +1,3 @@
+svn remove --force filename
+svn resolve --accept=working  filename
+svn up

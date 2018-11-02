@@ -1,0 +1,9 @@
+c原因1：由于计划任务服务停掉了
+首先查看计划任务状态：service crond status
+如果停止掉了，就开起来：service crond start
+
+/etc/rc.d/init.d/crond restart	#重启
+/etc/rc.d/init.d/crond reload	#不中断服务，重新载入配置
+
+原因2：当前用户没有计划任务的权限
+

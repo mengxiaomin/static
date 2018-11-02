@@ -1,0 +1,17 @@
+杀死进程的方法：
+
+一.使用pgrep，找出进程
+一看到pgrep首先会想到什么？没错，grep, pgrep的p表明了这个命令是专门用于进程查询的grep。
+$ pgrep firefox		//表示找出firefox的进程值
+1827
+
+看到了什么？没错火狐的PID，接下来又要打字了：
+$ kill -15 1827	#建议用这个安全删除，程序有个善后工作
+$ kill -s 9 1827 #请慎用，在万不得已情况下使用，程序没有善后工作，强制退出
+
+
+二.使用pkill,删除相关的进程
+例如：重启redis服务
+1. pkill reids	//结束掉redis的相关进程
+2. /usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf
+//重新开启redis进程

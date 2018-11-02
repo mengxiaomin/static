@@ -1,0 +1,22 @@
+1. 网络端口是否能访问
+telnet [ip] [port]
+例子：
+telnet 121.202.135.32 3306
+
+2. 网络端口是否被占用
+netstat –alpn | grep [port]
+例子：
+netstat -alpn | grep 8080
+
+3. 查看端口使用情况
+lsof -i:(端口号)
+lsof -i:3306	#查看mysql的端口号
+
+如果losf命令不存在
+yum -y install lsof
+
+4. 查看tcp网络连接情况
+netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+
+5. centos7下面的网络端口监听情况
+ss -luntp

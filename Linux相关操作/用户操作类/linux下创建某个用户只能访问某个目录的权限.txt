@@ -1,0 +1,6 @@
+1.添加用户
+useradd -d /home/wwwroot/wxvip hjc
+        |标识|      目录        | 用户|
+
+2.设置密码
+passwd hjc

@@ -1,0 +1,10 @@
+将workerman加入自启动程序中
+
+1. 进入rc.local文件中
+vim /etc/rc.d/rc.loacal 或者 vim /etc/rc.local
+
+2. 加入自启动脚本路径
+/usr/bin/php /mnt/lost+found/www/dorm_charge_cjq_nl/operate.php start -d
+/usr/bin/php /mnt/lost+found/www/dorm_charge_cjq_nl/server.php start -d
+或者把以上命令写入一个shell脚本中
+/bin/bash /mnt/lost+found/www/cjq_nl.sh

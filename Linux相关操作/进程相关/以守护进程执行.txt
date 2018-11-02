@@ -1,0 +1,8 @@
+#以守护进程方式启动
+语法：nohup [执行命令] [脚本名] &;
+
+例子1：
+nohup bash /data/shellcode/test.sh &
+
+例子2：
+nohup /usr/bin/php /home/wwwroot/task/crontab.php &

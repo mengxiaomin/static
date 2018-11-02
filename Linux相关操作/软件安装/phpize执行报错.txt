@@ -1,0 +1,14 @@
+phpize执行报错：
+The php-devel package is required for use of this command
+
+安装如下组件:
+如果是php5.5:
+yum install php55w-devel
+
+
+如果是php5.4:
+yum install php54w-devel
+
+
+如果是php5.6:
+yum install php56w-devel

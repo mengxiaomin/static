@@ -1,0 +1,14 @@
+1. 压缩目录文件
+1.1 tar -zcvf xxx.tar.gz xxx	#所有文件目录进行压缩
+1.2 #压缩目录，并排除指定的文件和目录
+tar -czvf uhome_bakup.tar.gz uhome --exclude=uhome/.svn --exclude=uhome/data/logs --exclude=uhome/data/conf/db.php --exclude=uhome/data/conf/cache.php --exclude=uhome/Uploads --exclude=uhome/app/Extend/Task/Core/Config --exclude=uhome/index.php --exclude=uhome/map.php --exclude=uhome/info.php
+
+2. 用scp远程操作命令拷贝到另一台主机
+scp -v xxx.tar.gz root@182.92.71.70:/home/wwwroot
+
+3. 从远程复制文件本地
+scp root@182.92.71.70:/home/root/xxx.tar.gz /home/wwwr/xxx.tar.gz
+
+4. 在解压文件
+tar -zxvf xxx.tar.gz
+

@@ -1,0 +1,19 @@
+安装PHP源码包扩展相关：
+
+1. 解压：tar -zxvf xxx.tar.gz
+
+2. 进入目录：cd xxx
+
+3. 编译
+3.1 phpize
+如果phpize不存在，则yum install php-devel|php54w-devel|php55w-devel|php56w-devel
+3.2 ./configure --prefix=/usr/local/xxx
+
+4. 安装
+make && make install
+
+5. 重启php-fpm
+杀掉进程
+killall php-fpm
+使得php-fpm在后台运行
+php-fpm &

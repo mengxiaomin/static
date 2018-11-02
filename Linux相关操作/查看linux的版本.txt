@@ -1,0 +1,4 @@
+1. cat /etc/redhat-release
+
+
+2. lsb_release –a
